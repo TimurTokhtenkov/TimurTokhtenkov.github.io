@@ -1,0 +1,207 @@
+:root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-card: #252525;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --accent: #6a8fd8;
+    --accent-hover: #5a7fc8;
+}
+
+[data-theme="light"] {
+    --bg-primary: #f5f7fa;
+    --bg-secondary: #ffffff;
+    --bg-card: #f0f2f5;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent: #4a76a8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+
+.mobile-header {
+    position: sticky;
+    top: 0;
+    background: var(--bg-secondary);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.mobile-header h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.mobile-back-btn, .mobile-theme-btn {
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.mobile-day-tabs {
+    display: flex;
+    background: var(--bg-secondary);
+    position: sticky;
+    top: 60px;
+    z-index: 90;
+    padding: 10px 5px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.mobile-day-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.day-tab {
+    flex: 1;
+    min-width: 50px;
+    padding: 8px 5px;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    margin: 0 3px;
+}
+
+.day-tab.active {
+    background: var(--accent);
+    color: white;
+}
+
+.mobile-schedule-container {
+    padding: 10px;
+}
+
+.day-schedule {
+    display: none;
+}
+
+.day-schedule.active {
+    display: block;
+}
+
+.lesson-card {
+    background: var(--bg-card);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.lesson-time {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background: var(--bg-secondary);
+    font-size: 0.9rem;
+    gap: 15px;
+}
+
+.lesson-num {
+    background: var(--accent);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.lesson-info {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    gap: 12px;
+}
+
+.lesson-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.lesson-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.subject-name {
+    font-weight: 600;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.teacher-name {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.classroom {
+    background: rgba(255,255,255,0.1);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    margin-left: auto;
+}
+
+/* Цвета иконок */
+.lesson-icon.literature { background: #e63946; }
+.lesson-icon.biology { background: #2a9d8f; }
+.lesson-icon.math { background: #457b9d; }
+.lesson-icon.history { background: #7209b7; }
+.lesson-icon.physics { background: #3a86ff; }
+.lesson-icon.geography { background: #1d3557; }
+.lesson-icon.informatics { background: #06d6a0; }
+.lesson-icon.chemistry { background: #8338ec; }
+.lesson-icon.pe { background: #e76f51; }
+
+@media (max-width: 400px) {
+    .lesson-info {
+        flex-wrap: wrap;
+    }
+    
+    .classroom {
+        margin-left: 48px; /* выравнивание с иконкой */
+        margin-top: -8px;
+    }
+}

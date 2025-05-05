@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <title>Расписание звонков | 9г класс</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-switcher">
+        <button id="themeToggle"><i class="fas fa-moon"></i></button>
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <h1><i class="fas fa-bell"></i> Расписание звонков</h1>
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> На главную</a>
+        </div>
+    </header>
+    
+    <main class="bells-container">
+        <div class="bells-schedule">
+            <div class="schedule-header">
+                <h2><i class="fas fa-clock"></i> Основное расписание</h2>
+                <div class="schedule-type">
+                    <span class="active">Обычные дни</span>
+                    <span>Сокращённые дни</span>
+                </div>
+            </div>
+            
+            <div class="bells-list">
+                <div class="bell-item primary">
+                    <div class="bell-number">1</div>
+                    <div class="bell-time">08:00 - 08:40</div>
+                    <div class="bell-duration">перемена 15 мин</div>
+                </div>
+                
+                <div class="bell-item">
+                    <div class="bell-number">2</div>
+                    <div class="bell-time">08:55 - 09:35</div>
+                    <div class="bell-duration">перемена 20 мин</div>
+                </div>
+                
+                <div class="bell-item primary">
+                    <div class="bell-number">3</div>
+                    <div class="bell-time">09:55 - 10:35</div>
+                    <div class="bell-duration">перемена 15 мин</div>
+                </div>
+                
+                <div class="bell-item">
+                    <div class="bell-number">4</div>
+                    <div class="bell-time">10:50 - 11:30</div>
+                    <div class="bell-duration">перемена 15 мин</div>
+                </div>
+                
+                <div class="bell-item primary">
+                    <div class="bell-number">5</div>
+                    <div class="bell-time">11:45 - 12:25</div>
+                    <div class="bell-duration">перемена 10 мин</div>
+                </div>
+                
+                <div class="bell-item">
+                    <div class="bell-number">6</div>
+                    <div class="bell-time">12:35 - 13:15</div>
+                    <div class="bell-duration">перемена 5 мин</div>
+                </div>
+                
+                <div class="bell-item primary">
+                    <div class="bell-number">7</div>
+                    <div class="bell-time">13:20 - 14:00</div>
+                    <div class="bell-duration">перемена 10 мин</div>
+                </div>
+                
+                <div class="bell-item">
+                    <div class="bell-number">8</div>
+                    <div class="bell-time">14:10 - 14:50</div>
+                    <div class="bell-duration">перемена 10 мин</div>
+                </div>
+            </div>
+            
+            <div class="schedule-notes">
+                <div class="note-item">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Обед после 4 урока</p>
+                </div>
+                <div class="note-item">
+                    <i class="fas fa-info-circle"></i>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="additional-info">
+            <div class="info-card">
+                <h3><i class="fas fa-utensils"></i> График питания</h3>
+                <ul class="meal-times">
+                    <li>------</li>
+                    <li>------</li>
+                    <li>------</li>
+                </ul>
+            </div>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-calendar-exclamation"></i> Особые дни</h3>
+                <ul class="special-days">
+                    <li>-------</li>
+                    <li>-------</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>© 2023 Школьное расписание | <span id="currentDate"></span></p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        // Обновление текущей даты
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('ru-RU', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        
+        // Переключение между обычными и сокращёнными днями
+        const scheduleTypes = document.querySelectorAll('.schedule-type span');
+        scheduleTypes.forEach(type => {
+            type.addEventListener('click', () => {
+                scheduleTypes.forEach(t => t.classList.remove('active'));
+                type.classList.add('active');
+                // Здесь можно добавить логику переключения расписаний
+            });
+        });
+    </script>
+</body>
+</html>

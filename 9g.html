@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9, user-scalable=no">
+    <title>9г класс</title>
+    <link rel="stylesheet" href="mobile-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="mobile-header">
+        <button class="mobile-back-btn" onclick="window.history.back()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <h1>9г класс</h1>
+        <button class="mobile-theme-btn" id="mobileThemeToggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <div class="mobile-day-tabs">
+        <button class="day-tab active" data-day="mon">ПН</button>
+        <button class="day-tab" data-day="tue">ВТ</button>
+        <button class="day-tab" data-day="wed">СР</button>
+        <button class="day-tab" data-day="thu">ЧТ</button>
+        <button class="day-tab" data-day="fri">ПТ</button>
+		
+    </div>
+
+    <main class="mobile-schedule-container">
+        <!-- Понедельник -->
+        <div class="day-schedule active" id="mon">
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">1</span>
+                    <span>08:00-08:40</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-book-open lesson-icon literature"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Русский язык</div>
+                        <div class="teacher-name">Соколова А.В.</div>
+                    </div>
+                    <span class="classroom">45</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">2</span>
+                    <span>08:55-09:35</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-dna lesson-icon biology"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Биология</div>
+                        <div class="teacher-name">Кравченко Д.В.</div>
+                    </div>
+                    <span class="classroom">47</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">3</span>
+                    <span>09:55-10:35</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-comments lesson-icon important"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Разговоры о важном</div>
+                        <div class="teacher-name">Тофанило Е.А.</div>
+                    </div>
+                    <span class="classroom">33</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">4</span>
+                    <span>10:50-11:30</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-book lesson-icon literature"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Литература</div>
+                        <div class="teacher-name">Соколова А.В.</div>
+                    </div>
+                    <span class="classroom">45</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">5</span>
+                    <span>11:45-12:25</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-square-root-alt lesson-icon math"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Алгебра</div>
+                        <div class="teacher-name">Расскацикова Н.Г.</div>
+                    </div>
+                    <span class="classroom">32</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">6</span>
+                    <span>12:35-13:15</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-shapes lesson-icon math"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Геометрия</div>
+                        <div class="teacher-name">Расскацикова Н.Г.</div>
+                    </div>
+                    <span class="classroom">32</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">7</span>
+                    <span>13:20-14:00</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-landmark lesson-icon history"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">История</div>
+                        <div class="teacher-name">Папоян А.Р.</div>
+                    </div>
+                    <span class="classroom">35</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">8</span>
+                    <span>14:10-14:50</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-atom lesson-icon physics"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Физика</div>
+                        <div class="teacher-name">Кириллова Л.А.</div>
+                    </div>
+                    <span class="classroom">38</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Вторник -->
+        <div class="day-schedule" id="tue">
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">1</span>
+                    <span>08:00-08:40</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-square-root-alt lesson-icon math"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Алгебра</div>
+                        <div class="teacher-name">Расскацикова Н.Г.</div>
+                    </div>
+                    <span class="classroom">32</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">2</span>
+                    <span>08:55-09:35</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-landmark lesson-icon history"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">История</div>
+                        <div class="teacher-name">Папоян А.Р.</div>
+                    </div>
+                    <span class="classroom">24</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">3</span>
+                    <span>09:55-10:35</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-globe-europe lesson-icon geography"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Русский язык</div>
+                        <div class="teacher-name">Соколова А.В.</div>
+                    </div>
+                    <span class="classroom">45</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">4</span>
+                    <span>10:50-11:30</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-book lesson-icon literature"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">География</div>
+                        <div class="teacher-name">---</div>
+                    </div>
+                    <span class="classroom">46</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">5</span>
+                    <span>11:45-12:25</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-laptop-code lesson-icon informatics"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Литература</div>
+                        <div class="teacher-name">Соколова А.В.</div>
+                    </div>
+                    <span class="classroom">45</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">6</span>
+                    <span>12:35-13:15</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-tools lesson-icon technology"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Труды (математика)</div>
+                        <div class="teacher-name">Куценко Е.П.</div>
+                    </div>
+                    <span class="classroom">34</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">7</span>
+                    <span>13:20-14:00</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-laptop-code lesson-icon informatics"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Информатика</div>
+                        <div class="teacher-name">
+                            <span class="double-info">Расскацикова Н.Г. - 32<br>Малых А.А. - 9</span>
+                        </div>
+                    </div>
+                    <span class="classroom">
+                        <span class="double-info">32<br>9</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">8</span>
+                    <span>14:10-14:50</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-flask lesson-icon chemistry"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Химия</div>
+                        <div class="teacher-name">Асаенок А.А.</div>
+                    </div>
+                    <span class="classroom">7</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Среда -->
+        <div class="day-schedule" id="wed">
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">1</span>
+                    <span>08:00-08:40</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-dna lesson-icon biology"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Биология</div>
+                        <div class="teacher-name">Кравченко Д.В.</div>
+                    </div>
+                    <span class="classroom">47</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">2</span>
+                    <span>08:55-09:35</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-book-open lesson-icon literature"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Русский язык</div>
+                        <div class="teacher-name">Соколова А.В.</div>
+                    </div>
+                    <span class="classroom">45</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">3</span>
+                    <span>09:55-10:35</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-running lesson-icon pe"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Физкультура</div>
+                        <div class="teacher-name">Герус А.А.</div>
+                    </div>
+                    <span class="classroom">Спортзал</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">4</span>
+                    <span>10:50-11:30</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-language lesson-icon english"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Английский язык</div>
+                        <div class="teacher-name">
+                            <span class="double-info">Калугина Н.Ю. - 48<br>Лебедева Д.А. - 49</span>
+                        </div>
+                    </div>
+                    <span class="classroom">
+                        <span class="double-info">48<br>49</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">5</span>
+                    <span>11:45-12:25</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-flask lesson-icon chemistry"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Химия</div>
+                        <div class="teacher-name">Асаенок А.А.</div>
+                    </div>
+                    <span class="classroom">7</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">6</span>
+                    <span>12:35-13:15</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-landmark lesson-icon history"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">История</div>
+                        <div class="teacher-name">Папоян А.Р.</div>
+                    </div>
+                    <span class="classroom">36</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">7</span>
+                    <span>13:20-14:00</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-chart-line lesson-icon statistics"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Вероятность и статистика</div>
+                        <div class="teacher-name">Расскацикова Н.Г.</div>
+                    </div>
+                    <span class="classroom">32</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Четверг -->
+        <div class="day-schedule" id="thu">
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">1</span>
+                    <span>08:00-08:40</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-atom lesson-icon physics"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Физика</div>
+                        <div class="teacher-name">Кириллова Л.А.</div>
+                    </div>
+                    <span class="classroom">38</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">2</span>
+                    <span>08:55-09:35</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-map-marked-alt lesson-icon horizons"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Россия - мои горизонты</div>
+                        <div class="teacher-name">Тофанило Е.А.</div>
+                    </div>
+                    <span class="classroom">33</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">3</span>
+                    <span>09:55-10:35</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-square-root-alt lesson-icon math"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Алгебра</div>
+                        <div class="teacher-name">Расскацикова Н.Г.</div>
+                    </div>
+                    <span class="classroom">32</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">4</span>
+                    <span>10:50-11:30</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-language lesson-icon english"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Английский язык</div>
+                        <div class="teacher-name">
+                            <span class="double-info">Калугина Н.Ю. - 39<br>Лебедева Д.А. - 49</span>
+                        </div>
+                    </div>
+                    <span class="classroom">
+                        <span class="double-info">39<br>49</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">5</span>
+                    <span>11:45-12:25</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-book lesson-icon literature"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Литература</div>
+                        <div class="teacher-name">Соколова А.В.</div>
+                    </div>
+                    <span class="classroom">45</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">6</span>
+                    <span>12:35-13:15</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-running lesson-icon pe"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Физкультура</div>
+                        <div class="teacher-name">Герус А.А.</div>
+                    </div>
+                    <span class="classroom">Спортзал</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Пятница -->
+        <div class="day-schedule" id="fri">
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">1</span>
+                    <span>08:00-08:40</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-globe-europe lesson-icon geography"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">География</div>
+                        <div class="teacher-name">---</div>
+                    </div>
+                    <span class="classroom">46</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">2</span>
+                    <span>08:55-09:35</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-shapes lesson-icon math"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Геометрия</div>
+                        <div class="teacher-name">Расскацикова Н.Г.</div>
+                    </div>
+                    <span class="classroom">32</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">3</span>
+                    <span>09:55-10:35</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-atom lesson-icon physics"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Физика</div>
+                        <div class="teacher-name">Кириллова Л.А.</div>
+                    </div>
+                    <span class="classroom">38</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">4</span>
+                    <span>10:50-11:30</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-first-aid lesson-icon obzh"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">ОБЖ</div>
+                        <div class="teacher-name">Порсина О.Н.</div>
+                    </div>
+                    <span class="classroom">30</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">5</span>
+                    <span>11:45-12:25</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-users lesson-icon social"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Обществознание</div>
+                        <div class="teacher-name">Папоян А.Р.</div>
+                    </div>
+                    <span class="classroom">4</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card">
+                <div class="lesson-time">
+                    <span class="lesson-num">6</span>
+                    <span>12:35-13:15</span>
+                </div>
+                <div class="lesson-info">
+                    <i class="fas fa-language lesson-icon english"></i>
+                    <div class="lesson-details">
+                        <div class="subject-name">Английский язык</div>
+                        <div class="teacher-name">
+                            <span class="double-info">Калугина Н.Ю. - 24<br>Лебедева Д.А. - 49</span>
+                        </div>
+                    </div>
+                    <span class="classroom">
+                        <span class="double-info">24<br>49</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mobile-footer">
+        <p>© 2025 Школьное расписание </p>
+    </footer>
+	
+
+    <script src="mobile-script.js"></script>
+</body>
+</html>
